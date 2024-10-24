@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+
+    <title>Nashville Car Wrecks</title>
+    
+    <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/dojo/1.10.4/dijit/themes/tundra/tundra.css">
+    <link rel="stylesheet" href="main.css" type="text/css">
+    <link rel="stylesheet" href="https://js.arcgis.com/4.27/esri/themes/light/main.css" type="text/css">
+    <script src="https://js.arcgis.com/4.24/" type="text/javascript"></script>
+
+    <script>
+        require(["dojo/parser", "dijit/layout/BorderContainer", "dijit/layout/ContentPane", "dojo/domReady!"], function(parser){
+            parser.parse();           
+        });
+    </script>
+
+    <script src="main.js" type="text/javascript"></script>
+</head>
+
+<body class="tundra">
+    <div id="appLayout" class="demoLayout" data-dojo-type="dijit/layout/LayoutContainer" data-dojo-props="design: 'headline', gutters: false">
+        <div id="mapPane" class="centerPanel" data-dojo-type="dijit/layout/ContentPane" data-dojo-props="region: 'center'">
+            <div id="viewDiv"></div>
+            <div id="optionsDiv" class="esri-widget">
+                <h3>Filter Car Wrecks:</h3><br>
+                <b>Precinct:</b>
+                <select id="precinctSelect">
+                    <option value="ALL">All</option>
+                </select><br><br>
+                <b>Collision Type:</b>
+                <select id="collisionTypeSelect">
+                    <option value="ALL">All</option>
+                </select><br><br>
+                <b>Weather:</b>
+                <select id="weatherSelect">
+                    <option value="ALL">All</option>
+                </select><br><br>
+                <b>Lighting:</b>
+                <select id="lightingSelect">
+                    <option value="ALL">All</option>
+                </select><br><br>
+                <button id="filterWrecks">Filter Wrecks</button>
+                <p id="resultCount"></p>
+            </div>
+        </div>
+        <div class="edgePanel" data-dojo-type="dijit/layout/ContentPane" data-dojo-props="region: 'top'">
+            Nashville Car Wrecks
+        </div>
+    </div>
+</body>
+
+</html>

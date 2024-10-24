@@ -1,0 +1,35 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    background-color: #333434;
+}
+
+select {
+  width: 10em;
+}
+
+#viewDiv {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+}
+
+#optionsDiv {
+    width: 300 px;
+    padding: 10px 15px 10px 15px;
+    background-color: white;
+}
+
+#appLayout {
+    height: 100%;
+}
+
+.tundra .demoLayout .edgePanel {
+    background-color: #333434;
+    color: rgb(255, 255, 255);
+    padding: 15px;
+    border: 2px solid black;
+}
